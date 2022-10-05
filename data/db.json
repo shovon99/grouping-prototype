@@ -1,0 +1,244 @@
+{
+  "students": [
+    {
+      "id": 29433876,
+      "password": "ribudoba",
+      "first_name": "Crawford",
+      "last_name": "Treutel",
+      "email": "Adrain.Brown49@yahoo.com",
+      "phone": "+61 078 061 552",
+      "notes": "Praesentium id et impedit voluptatem ut debitis maiores nemo optio. Et itaque sunt qui asperiores ipsum.",
+      "strengths": {
+        "communication": 2,
+        "writing": 4,
+        "programming": 2
+      },
+      "group": 1
+    },
+    {
+      "id": 29384077,
+      "password": "sabusiyu",
+      "first_name": "Ruben",
+      "last_name": "Price",
+      "email": "Rey.McDermott@hotmail.com",
+      "phone": "+61 518 567 057",
+      "notes": "Quia cumque vero exercitationem sequi laborum eum molestiae corporis quia. Voluptas autem ut ipsam beatae culpa consequatur voluptas eaque aut.",
+      "strengths": {
+        "communication": 2,
+        "writing": 0,
+        "programming": 4
+      },
+      "group": 1
+    },
+    {
+      "id": 24888651,
+      "password": "godohipo",
+      "first_name": "Gerda",
+      "last_name": "Heidenreich",
+      "email": "Carol.Osinski77@gmail.com",
+      "phone": "+61 577 212 893",
+      "notes": "Inventore laboriosam est voluptates iste omnis deserunt deserunt. Voluptates similique sed inventore veritatis sed non reiciendis est rem.",
+      "strengths": {
+        "communication": 3,
+        "writing": 4,
+        "programming": 3
+      },
+      "group": 1
+    },
+    {
+      "id": 22827636,
+      "password": "josiwinu",
+      "first_name": "Laron",
+      "last_name": "Hammes",
+      "email": "Vernon35@gmail.com",
+      "phone": "+61 654 550 197",
+      "notes": "Quia id sint veniam veniam perspiciatis sed. Laboriosam maiores et ut consequuntur.",
+      "strengths": {
+        "communication": 0,
+        "writing": 0,
+        "programming": 0
+      },
+      "group": 1
+    },
+    {
+      "id": 26781650,
+      "password": "niyapafo",
+      "first_name": "Daisy",
+      "last_name": "Rodriguez",
+      "email": "Gisselle.Wisoky37@gmail.com",
+      "phone": "+61 428 598 597",
+      "notes": "Repellat ullam ducimus dolores et id maiores blanditiis autem. Et dolorem minus.",
+      "strengths": {
+        "communication": 3,
+        "writing": 4,
+        "programming": 2
+      },
+      "group": 2
+    },
+    {
+      "id": 22993582,
+      "password": "cexaneka",
+      "first_name": "Alberto",
+      "last_name": "Considine",
+      "email": "Gussie64@yahoo.com",
+      "phone": "+61 137 802 512",
+      "notes": "Sit molestiae aut ducimus porro voluptas voluptatem non repellendus. Qui officia et possimus qui.",
+      "strengths": {
+        "communication": 0,
+        "writing": 3,
+        "programming": 1
+      },
+      "group": 2
+    },
+    {
+      "id": 24825705,
+      "password": "pofezadu",
+      "first_name": "Ramona",
+      "last_name": "Heidenreich",
+      "email": "Lenny66@gmail.com",
+      "phone": "+61 809 581 007",
+      "notes": "Aspernatur nesciunt consequuntur voluptatem quia eaque quisquam quas ea nostrum. Autem soluta voluptates.",
+      "strengths": {
+        "communication": 0,
+        "writing": 3,
+        "programming": 1
+      },
+      "group": -1
+    },
+    {
+      "id": 26158619,
+      "password": "wejabawo",
+      "first_name": "Arvid",
+      "last_name": "Runolfsdottir",
+      "email": "Keven_Hermiston28@hotmail.com",
+      "phone": "+61 182 791 249",
+      "notes": "Ratione deserunt est culpa voluptatem enim. Error cum ea veritatis eaque officia aliquid explicabo.",
+      "strengths": {
+        "communication": 1,
+        "writing": 0,
+        "programming": 3
+      },
+      "group": 3
+    },
+    {
+      "id": 28346503,
+      "password": "zudokoqa",
+      "first_name": "Adrienne",
+      "last_name": "Larson",
+      "email": "Earl.Nitzsche36@yahoo.com",
+      "phone": "+61 641 094 959",
+      "notes": "Assumenda rerum ut magnam est. Inventore illo voluptate et.",
+      "strengths": {
+        "communication": 4,
+        "writing": 1,
+        "programming": 3
+      },
+      "group": 3
+    },
+    {
+      "id": 28284495,
+      "password": "bivetazo",
+      "first_name": "Selina",
+      "last_name": "Orn",
+      "email": "Breanna_Maggio41@yahoo.com",
+      "phone": "+61 139 243 592",
+      "notes": "Rerum dolorem pariatur nostrum repudiandae ratione libero autem. Voluptas excepturi quos cum quas enim earum.",
+      "strengths": {
+        "communication": 2,
+        "writing": 3,
+        "programming": 3
+      },
+      "group": -1
+    },
+    {
+      "id": 24521307,
+      "password": "texeseme",
+      "first_name": "Prince",
+      "last_name": "Kling",
+      "email": "Veda.Hills@gmail.com",
+      "phone": "+61 101 980 469",
+      "notes": "Tempore consequatur ut quidem. Voluptas adipisci similique unde non.",
+      "strengths": {
+        "communication": 0,
+        "writing": 3,
+        "programming": 1
+      },
+      "group": -1
+    },
+    {
+      "id": 27009734,
+      "password": "ceceziqo",
+      "first_name": "Maxwell",
+      "last_name": "Runte",
+      "email": "Damian60@gmail.com",
+      "phone": "+61 737 620 675",
+      "notes": "Velit nemo consequatur quis nihil non. Perferendis sit voluptatibus est totam distinctio sit iusto.",
+      "strengths": {
+        "communication": 4,
+        "writing": 2,
+        "programming": 3
+      },
+      "group": 4
+    },
+    {
+      "id": 29723450,
+      "password": "munadasi",
+      "first_name": "Elvis",
+      "last_name": "Gerhold",
+      "email": "Hollis.Marvin20@yahoo.com",
+      "phone": "+61 306 003 239",
+      "notes": "Dolorem aut numquam voluptatum sed ex deserunt. Est quod nostrum ut est temporibus et aut quibusdam consectetur.",
+      "strengths": {
+        "communication": 2,
+        "writing": 2,
+        "programming": 2
+      },
+      "group": 4
+    },
+    {
+      "id": 24173097,
+      "password": "cemenipu",
+      "first_name": "Nickolas",
+      "last_name": "Morissette",
+      "email": "Melissa91@hotmail.com",
+      "phone": "+61 741 912 884",
+      "notes": "Quos enim ad. Eum quibusdam harum quo deserunt.",
+      "strengths": {
+        "communication": 4,
+        "writing": 3,
+        "programming": 3
+      },
+      "group": 4
+    },
+    {
+      "id": 27311575,
+      "password": "gubekevi",
+      "first_name": "Allene",
+      "last_name": "Breitenberg",
+      "email": "Danyka_Runolfsson@hotmail.com",
+      "phone": "+61 812 832 106",
+      "notes": "Distinctio accusamus dolore aut qui molestiae. Nesciunt quod dolores possimus.",
+      "strengths": {
+        "communication": 0,
+        "writing": 1,
+        "programming": 4
+      },
+      "group": -1
+    },
+    {
+      "id": 26671250,
+      "password": "guberevi",
+      "first_name": "Norbert",
+      "last_name": "Ailmass",
+      "email": "Norbert@hotmail.com",
+      "phone": "+61 812 832 199",
+      "notes": "Distinctio accusamus dolore aut qui molestiae. Nesciunt quod dolores possimus.",
+      "strengths": {
+        "communication": 3,
+        "writing": 1,
+        "programming": 4
+      },
+      "group": 2
+    }
+  ]
+}
