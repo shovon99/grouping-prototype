@@ -10,7 +10,7 @@
                 </div>
         </div>
 
-        <div class="studentViewBody">
+        <div v-if="showGroups" class="studentViewBody">
 
             <div class="row">
                 <div class="column1">
@@ -29,11 +29,14 @@
                 </div>
                 <div class="column2">
                     <div class="allStudentList">
-                        <StudentList/>
+                        <StudentList @clickedStudentDetails="handleClickedStudentDetails"/>
                     </div>
                 </div>
             </div>
 
+        </div>
+        <div v-if="showStudentDetails" class="studentDetailSection" >
+            <StudentDetails :id="detailStudentID" @goGroups="goGroupsView"/>
         </div>
   </div>
   
@@ -44,23 +47,51 @@
 import StudentList from "../components/StudentList.vue"
 import SingleGroup from "../components/SingleGroup.vue";
 
+import StudentDetails from "../components/StudentDetails.vue"
+
 export default {
     components: {
         StudentList,
-        SingleGroup
+        SingleGroup,
+        StudentDetails
     },
     props: ['id'],
     methods: {
         goHome() {
             this.$router.push( {name: 'login'} )
+        },
+        goGroupsView() {
+            
+            this.showStudentDetails = false;
+            this.showGroupDetails = false;
+            this.showStudentProfile = false;
+
+            this.showGroups = true;
+        },
+        handleClickedStudentDetails(studentID){
+            console.log(studentID);
+            this.detailStudentID = studentID;
+
+            this.showGroups = false;
+            this.showStudentDetails = true;
+            this.showGroupDetails = false;
+            this.showStudentProfile = false;
+        }
+    },
+    data() {
+        return {
+            showGroups: true,
+            showStudentDetails: false,
+            showGroupDetails: false,
+            showStudentProfile: false,
+
+            detailStudentID: null,
         }
     }
 }
 </script>
 
 <style>
-.allbody {
-}
 .appName {
     display: inline-block;
 }
@@ -103,6 +134,9 @@ export default {
     display: inline-block;
     padding: 20px;
     margin-top: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 1px solid rgb(212, 211, 211);
+    border-radius: 5px;
 }
 .groupView {
     display: inline-block;
