@@ -169,5 +169,9 @@ export default {
   display: table;
   clear: both;
 }
+.studentDetailSection {
+    width: 100%;
+    margin: 0 auto;
+}
 
 </style>
