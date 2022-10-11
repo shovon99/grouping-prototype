@@ -10,9 +10,9 @@
         </div>
         
         <div class="buttons">
-            <button>Join</button>
-            <button>Leave</button>
-            <button>Details</button>
+            <button @click="emitGroupJoin">Join</button>
+            <button @click="emitGroupLeave">Leave</button>
+            <button @click="emitGroupDetails">Details</button>
         </div>
     </div>
 </template>
@@ -36,6 +36,17 @@ export default {
                 .catch(error => {
                     console.log(error.message);
                 });
+    },
+    methods: {
+        emitGroupDetails() {
+            this.$emit('groupDetailClicked', this.group)
+        },
+        emitGroupJoin() {
+            this.$emit('groupJoinClicked', this.group)
+        },
+        emitGroupLeave() {
+            this.$emit('groupLeaveClicked', this.group)
+        }
     }
 }
 </script>

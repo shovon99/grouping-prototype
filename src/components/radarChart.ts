@@ -55,26 +55,18 @@ export default defineComponent({
       type: Array,
       default: () => []
     },
-    programming: {
-        type: Number,
-        default: 0
+    gotLabels: {
+      type: Array,
+      default: () => []
     },
-    writing: {
-        type: Number,
-        default: 0
-    },
-    communication: {
-        type: Number,
-        default: 0
+    gotData: {
+      type: Array,
+      default: () => []
     }
   },
   setup(props) {
     const chartData = {
-      labels: [
-        'Programming',
-        'Communication',
-        'Writing',
-      ],
+      labels: props.gotLabels,
       datasets: [
         {
           label: 'Strengths Radar',
@@ -84,7 +76,7 @@ export default defineComponent({
           pointBorderColor: '#fff',
           pointHoverBackgroundColor: '#fff',
           pointHoverBorderColor: 'rgba(179,181,198,1)',
-          data: [props.programming, props.communication, props.writing]
+          data: props.gotData
         },
       ]
     }

@@ -15,16 +15,40 @@
             <div class="row">
                 <div class="column1">
                     <div class="groupView">
-                        <SingleGroup :group="1"/>
+                        <SingleGroup 
+                        :key="componentsKey"
+                        :group="1" 
+                        @groupDetailClicked = "handleGroupDetailButtonPress"
+                        @groupJoinClicked = "handleGroupJoinButtonPress"
+                        @groupLeaveClicked = "handleGroupLeaveButtonPress"
+                        />
                     </div>
                     <div class="groupView">
-                        <SingleGroup :group="2"/>
+                        <SingleGroup 
+                        :key="componentsKey"
+                        :group="2" 
+                        @groupDetailClicked = "handleGroupDetailButtonPress"
+                        @groupJoinClicked = "handleGroupJoinButtonPress"
+                        @groupLeaveClicked = "handleGroupLeaveButtonPress"
+                        />
                     </div>
                     <div class="groupView">
-                        <SingleGroup :group="3"/>
+                        <SingleGroup 
+                        :key="componentsKey"
+                        :group="3" 
+                        @groupDetailClicked = "handleGroupDetailButtonPress"
+                        @groupJoinClicked = "handleGroupJoinButtonPress"
+                        @groupLeaveClicked = "handleGroupLeaveButtonPress"
+                        />
                     </div>
                     <div class="groupView">
-                        <SingleGroup :group="4"/>
+                        <SingleGroup 
+                        :key="componentsKey"
+                        :group="4" 
+                        @groupDetailClicked = "handleGroupDetailButtonPress"
+                        @groupJoinClicked = "handleGroupJoinButtonPress"
+                        @groupLeaveClicked = "handleGroupLeaveButtonPress"
+                        />
                     </div>
                 </div>
                 <div class="column2">
@@ -38,22 +62,28 @@
         <div v-if="showStudentDetails" class="studentDetailSection" >
             <StudentDetails :id="detailStudentID" @goGroups="goGroupsView"/>
         </div>
+        <div v-if="showGroupDetails">
+            <GroupDetails :Id="detailGroupID" @goGroups="goGroupsView"/>
+        </div>
   </div>
   
   
 </template>
 
 <script>
+
 import StudentList from "../components/StudentList.vue"
 import SingleGroup from "../components/SingleGroup.vue";
 
 import StudentDetails from "../components/StudentDetails.vue"
+import GroupDetails from "../components/GroupDetails.vue"
 
 export default {
     components: {
         StudentList,
         SingleGroup,
-        StudentDetails
+        StudentDetails,
+        GroupDetails
     },
     props: ['id'],
     methods: {
@@ -76,6 +106,68 @@ export default {
             this.showStudentDetails = true;
             this.showGroupDetails = false;
             this.showStudentProfile = false;
+        },
+
+        //From Single Group
+        handleGroupDetailButtonPress(groupId){
+            console.log("Group Detail Clicked from " + groupId)
+            this.detailGroupID = groupId;
+
+            this.showGroups = false;
+            this.showStudentDetails = false;
+            this.showGroupDetails = true;
+            this.showStudentProfile = false;
+
+        },
+        handleGroupJoinButtonPress(groupId){
+            console.log("Group Join Clicked from " + groupId)
+
+            //Set Student group as groupId
+
+            fetch(("http://localhost:3000/students/" + this.id),{
+                method: 'PATCH',
+                body: JSON.stringify({
+                    group: groupId,
+                }),
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8',
+                },
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("Patch Done for Joining.")
+                this.forceUpdate()
+            })
+            .catch(error => {
+                console.log(error.message);
+            });
+        },
+        handleGroupLeaveButtonPress(groupId){
+            console.log("Group Leave Clicked from " + groupId)
+
+            //Set Student group as -1
+
+            fetch(("http://localhost:3000/students/" + this.id),{
+                method: 'PATCH',
+                body: JSON.stringify({
+                    group: -1,
+                }),
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8',
+                },
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("Patch Done for Leaving.")
+                this.forceUpdate()
+            })
+            .catch(error => {
+                console.log(error.message);
+            });
+        },
+        forceUpdate() {
+            this.componentsKey += 1
+            console.log("ForceUpdate Called")
         }
     },
     data() {
@@ -86,6 +178,8 @@ export default {
             showStudentProfile: false,
 
             detailStudentID: null,
+            detailGroupID: null,
+            componentsKey: 0
         }
     }
 }

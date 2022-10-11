@@ -31,9 +31,8 @@
 
             <div id="chartArea">
                 <RadarChart 
-                    :programming="student.strengths.programming" 
-                    :writing="student.strengths.writing" 
-                    :communication="student.strengths.communication"
+                    :gotLabels="['Communication', 'Writing', 'Programming']" 
+                    :gotData="[student.strengths.communication, student.strengths.writing, student.strengths.programming]"
                     />
             </div>
             
