@@ -1,6 +1,6 @@
 <template>
   <div class="outerBody">
-    <h3>Group Details for {{ Id }}</h3>
+    <h3>Group Details for Group {{ Id }}</h3>
 
     <div class="groupBody" v-if="students">
 
