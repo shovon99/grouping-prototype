@@ -48,32 +48,33 @@ export default {
             console.log(this.id)
             console.log(this.password)
 
-            //Test
-            //this.$router.push({ name: 'notFound' })
-            fetch("http://localhost:3000/students/"+this.id)
+            if(this.logInAs === 'lecturer'){
+                this.$router.push({ name: 'lecturerView' })
+            }
+            else if (this.logInAs === 'student'){
+                fetch("http://localhost:3000/students/"+this.id)
                 .then(response => response.json())
                 .then(data => {
                     this.student = data;
                     console.log(this.student);
 
-                    if(this.logInAs === 'student')
+                    if(this.password === this.student.password)
                     {
-                        if(this.password === this.student.password)
-                        {
-                            console.log("Password Match!.")
-                            this.errorMessage = false;
-                            this.$router.push({ name: 'studentView', params: { id: this.student.id } })
-                        }
-                        else
-                        {
-                            this.errorMessage = true;
-                        }
+                        console.log("Password Match!.")
+                        this.errorMessage = false;
+                        this.$router.push({ name: 'studentView', params: { id: this.student.id } })
+                    }
+                    else
+                    {
+                        this.errorMessage = true;
                     }
                     
                 })
                 .catch(error => {
                     console.log(error.message);
                 });
+            }
+            
         }
     }
 }

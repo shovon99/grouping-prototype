@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import LogIn from "../views/LogIn.vue"
 import NotFound from "../views/NotFound.vue"
 import StudentView from "../views/StudentView.vue"
+import LectuerView from "../views/LecturerView.vue"
 
 const routes = [
   {
@@ -15,6 +16,11 @@ const routes = [
     name: 'studentView',
     component: StudentView,
     props: true
+  },
+  {
+    path: '/lecturer-view',
+    name: 'lecturerView',
+    component: LectuerView
   },
   {
     path: '/404',

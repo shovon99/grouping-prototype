@@ -30,10 +30,14 @@
             </div>
 
             <div id="chartArea">
-                <RadarChart 
+                <BarChart
+                    :labels="['Communication', 'Writing', 'Programming']" 
+                    :datas="[student.strengths.communication, student.strengths.writing, student.strengths.programming]"
+                />
+                <!-- <RadarChart 
                     :gotLabels="['Communication', 'Writing', 'Programming']" 
                     :gotData="[student.strengths.communication, student.strengths.writing, student.strengths.programming]"
-                    />
+                    /> -->
             </div>
             
             <div class="groupInfo">
@@ -49,11 +53,13 @@
 </template>
 
 <script>
+import BarChart from "../components/barChart.ts"
 import RadarChart from "../components/radarChart.ts"
 
 export default {
     components: {
-        RadarChart
+        RadarChart,
+        BarChart
     },
     props: ['id'],
     data() {
